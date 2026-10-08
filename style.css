@@ -36,22 +36,23 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 15px 8%;
+    padding: 10px 8%;
 
     z-index: 1000;
 }
 
-header h1 {
-    color: #e94b23;
-    font-size: 28px;
+/* LOGO */
+
+.logo img {
+    width: 130px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
 }
 
-header p {
-    color: white;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+/* MENU */
 
 nav {
     display: flex;
@@ -69,11 +70,11 @@ nav a:hover {
 }
 
 /* =========================
-   CONTEÚDO PRINCIPAL
+   CONTEÚDO
 ========================= */
 
 main {
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 section {
@@ -87,7 +88,7 @@ section h2 {
 }
 
 /* =========================
-   INÍCIO
+   PÁGINA INICIAL
 ========================= */
 
 #inicio {
@@ -136,9 +137,14 @@ section h2 {
     background-color: #c63b19;
 }
 
+/* IMAGEM PRINCIPAL */
+
 #inicio img {
     width: 100%;
-    max-width: 600px;
+    height: 400px;
+
+    object-fit: cover;
+
     border-radius: 10px;
 }
 
@@ -185,12 +191,17 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     gap: 25px;
+
+    background-color: #eeeeee;
 }
 
 #cardapio h2 {
     width: 100%;
 }
+
+/* CARDS */
 
 #cardapio article {
     background-color: white;
@@ -201,10 +212,18 @@ section h2 {
 
     border-radius: 8px;
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
     text-align: center;
+
+    transition: 0.3s;
 }
+
+#cardapio article:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGENS DOS CARDS */
 
 #cardapio img {
     width: 100%;
@@ -217,11 +236,14 @@ section h2 {
 
 #cardapio h3 {
     margin-top: 10px;
+    font-size: 20px;
 }
 
 #cardapio p {
     color: #e94b23;
+
     font-weight: bold;
+
     font-size: 18px;
 }
 
@@ -247,6 +269,7 @@ section h2 {
 
 #contato {
     background-color: white;
+
     text-align: center;
 }
 
@@ -260,6 +283,7 @@ section h2 {
 
 footer {
     background-color: #111;
+
     color: white;
 
     text-align: center;
@@ -269,6 +293,7 @@ footer {
 
 footer nav {
     justify-content: center;
+
     margin-top: 15px;
 }
 
@@ -283,18 +308,26 @@ footer nav {
         gap: 10px;
     }
 
+    .logo img {
+        width: 110px;
+        height: 55px;
+    }
+
     nav {
         gap: 12px;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
     main {
-        padding-top: 150px;
+        padding-top: 140px;
     }
 
     #inicio {
         flex-direction: column;
+
         text-align: center;
     }
 
@@ -304,7 +337,12 @@ footer nav {
 
     #inicio h2 {
         text-align: center;
+
         font-size: 35px;
+    }
+
+    #inicio img {
+        height: 300px;
     }
 
 }
