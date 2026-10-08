@@ -1,0 +1,310 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #111;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+
+    z-index: 1000;
+}
+
+header h1 {
+    color: #e94b23;
+    font-size: 28px;
+}
+
+header p {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e94b23;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    padding-top: 100px;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+/* =========================
+   INÍCIO
+========================= */
+
+#inicio {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#inicio > div {
+    width: 50%;
+}
+
+#inicio h2 {
+    text-align: left;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#inicio a {
+    display: inline-block;
+
+    background-color: #e94b23;
+    color: white;
+
+    padding: 14px 25px;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+#inicio a:hover {
+    background-color: #c63b19;
+}
+
+#inicio img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* =========================
+   DIFERENCIAIS
+========================= */
+
+#diferenciais {
+    background-color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+#diferenciais h2 {
+    width: 100%;
+}
+
+#diferenciais article {
+    background-color: #f5f5f5;
+
+    padding: 25px;
+
+    width: 220px;
+
+    text-align: center;
+
+    border-radius: 8px;
+}
+
+#diferenciais h3 {
+    color: #e94b23;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CARDÁPIO
+========================= */
+
+#cardapio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#cardapio h2 {
+    width: 100%;
+}
+
+#cardapio article {
+    background-color: white;
+
+    width: 220px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+#cardapio img {
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+#cardapio h3 {
+    margin-top: 10px;
+}
+
+#cardapio p {
+    color: #e94b23;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* =========================
+   SOBRE
+========================= */
+
+#sobre {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+}
+
+#sobre p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+#contato {
+    background-color: white;
+    text-align: center;
+}
+
+#contato p {
+    margin: 10px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer nav {
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding-top: 150px;
+    }
+
+    #inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #inicio > div {
+        width: 100%;
+    }
+
+    #inicio h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+}
