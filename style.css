@@ -13,11 +13,12 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
     color: #222;
     line-height: 1.6;
 }
+
 
 /* =========================
    CABEÇALHO
@@ -25,56 +26,79 @@ body {
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+    height: 85px;
 
     background-color: #111;
-    color: white;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    padding: 10px 8%;
+    padding: 8px 8%;
 
     z-index: 1000;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* LOGO */
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+}
 
 .logo img {
-    width: 130px;
-    height: 65px;
+    width: 120px;
+    height: 70px;
 
-    object-fit: cover;
+    object-fit: contain;
 
     border-radius: 5px;
 }
 
-/* MENU */
+
+/* =========================
+   MENU
+========================= */
 
 nav {
     display: flex;
-    gap: 25px;
+
+    gap: 30px;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #e94b23;
 }
 
+
 /* =========================
    CONTEÚDO
 ========================= */
 
 main {
-    padding-top: 90px;
+    padding-top: 85px;
 }
 
 section {
@@ -83,70 +107,114 @@ section {
 
 section h2 {
     text-align: center;
+
     margin-bottom: 35px;
+
     font-size: 32px;
 }
 
+
 /* =========================
-   PÁGINA INICIAL
+   INÍCIO
 ========================= */
 
 #inicio {
     min-height: 600px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    gap: 40px;
+    gap: 50px;
 
     background-color: #1a1a1a;
+
     color: white;
 }
 
-#inicio > div {
+
+/* TEXTO */
+
+.inicio-texto {
     width: 50%;
 }
 
-#inicio h2 {
-    text-align: left;
-    font-size: 45px;
+.subtitulo {
+    color: #e94b23;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.inicio-texto h1 {
+    font-size: 48px;
+
+    line-height: 1.15;
+
     margin-bottom: 20px;
 }
 
-#inicio p {
+.inicio-texto > p:not(.subtitulo) {
     font-size: 20px;
+
     margin-bottom: 30px;
 }
 
-#inicio a {
+
+/* BOTÃO */
+
+.botao {
     display: inline-block;
 
     background-color: #e94b23;
+
     color: white;
 
-    padding: 14px 25px;
+    padding: 14px 28px;
 
     text-decoration: none;
+
     border-radius: 5px;
 
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
-#inicio a:hover {
+.botao:hover {
     background-color: #c63b19;
+
+    transform: scale(1.03);
 }
+
 
 /* IMAGEM PRINCIPAL */
 
-#inicio img {
+.inicio-imagem {
+    width: 50%;
+}
+
+.inicio-imagem img {
+    display: block;
+
     width: 100%;
+
     height: 400px;
 
     object-fit: cover;
 
     border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
+
 
 /* =========================
    DIFERENCIAIS
@@ -156,10 +224,12 @@ section h2 {
     background-color: white;
 
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
 
-    gap: 20px;
+    gap: 25px;
 }
 
 #diferenciais h2 {
@@ -169,41 +239,54 @@ section h2 {
 #diferenciais article {
     background-color: #f5f5f5;
 
-    padding: 25px;
-
     width: 220px;
+
+    padding: 25px;
 
     text-align: center;
 
     border-radius: 8px;
+
+    border-bottom: 4px solid #e94b23;
+
+    transition: 0.3s;
+}
+
+#diferenciais article:hover {
+    transform: translateY(-5px);
 }
 
 #diferenciais h3 {
     color: #e94b23;
+
     margin-bottom: 10px;
 }
+
 
 /* =========================
    CARDÁPIO
 ========================= */
 
 #cardapio {
+    background-color: #eeeeee;
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
 
     gap: 25px;
-
-    background-color: #eeeeee;
 }
 
 #cardapio h2 {
     width: 100%;
 }
 
+
 /* CARDS */
 
-#cardapio article {
+.card {
     background-color: white;
 
     width: 220px;
@@ -212,21 +295,27 @@ section h2 {
 
     border-radius: 8px;
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
     text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 
     transition: 0.3s;
 }
 
-#cardapio article:hover {
-    transform: translateY(-5px);
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 /* IMAGENS DOS CARDS */
 
-#cardapio img {
+.card img {
+    display: block;
+
     width: 100%;
+
     height: 150px;
 
     object-fit: cover;
@@ -234,12 +323,13 @@ section h2 {
     border-radius: 5px;
 }
 
-#cardapio h3 {
+.card h3 {
     margin-top: 10px;
+
     font-size: 20px;
 }
 
-#cardapio p {
+.card p {
     color: #e94b23;
 
     font-weight: bold;
@@ -247,12 +337,14 @@ section h2 {
     font-size: 18px;
 }
 
+
 /* =========================
    SOBRE
 ========================= */
 
 #sobre {
     background-color: #222;
+
     color: white;
 
     text-align: center;
@@ -260,8 +352,12 @@ section h2 {
 
 #sobre p {
     max-width: 700px;
+
     margin: auto;
+
+    font-size: 18px;
 }
+
 
 /* =========================
    CONTATO
@@ -276,6 +372,7 @@ section h2 {
 #contato p {
     margin: 10px;
 }
+
 
 /* =========================
    RODAPÉ
@@ -297,6 +394,7 @@ footer nav {
     margin-top: 15px;
 }
 
+
 /* =========================
    RESPONSIVIDADE
 ========================= */
@@ -304,17 +402,29 @@ footer nav {
 @media (max-width: 768px) {
 
     header {
+        height: auto;
+
+        min-height: 100px;
+
         flex-direction: column;
-        gap: 10px;
+
+        gap: 5px;
+
+        padding: 8px;
+    }
+
+    .logo {
+        height: 50px;
     }
 
     .logo img {
-        width: 110px;
-        height: 55px;
+        width: 90px;
+
+        height: 50px;
     }
 
     nav {
-        gap: 12px;
+        gap: 15px;
 
         flex-wrap: wrap;
 
@@ -322,27 +432,73 @@ footer nav {
     }
 
     main {
-        padding-top: 140px;
+        padding-top: 110px;
     }
 
     #inicio {
         flex-direction: column;
 
         text-align: center;
+
+        padding-top: 50px;
     }
 
-    #inicio > div {
+    .inicio-texto {
         width: 100%;
     }
 
-    #inicio h2 {
-        text-align: center;
-
-        font-size: 35px;
+    .inicio-texto h1 {
+        font-size: 36px;
     }
 
-    #inicio img {
+    .inicio-texto > p:not(.subtitulo) {
+        font-size: 18px;
+    }
+
+    .inicio-imagem {
+        width: 100%;
+    }
+
+    .inicio-imagem img {
         height: 300px;
+    }
+
+    #diferenciais article {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+    .card {
+        width: 100%;
+
+        max-width: 300px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 480px) {
+
+    nav {
+        gap: 10px;
+
+        font-size: 14px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .inicio-texto h1 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 27px;
     }
 
 }
